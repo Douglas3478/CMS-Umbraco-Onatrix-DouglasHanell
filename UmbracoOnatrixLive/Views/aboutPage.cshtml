@@ -2,7 +2,164 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 @{
 	Layout = "mainLayout.cshtml";
+    ViewBag.Title = Model?.Value("aboutPageTitle") ?? null;
+
+    var globeLeft = Model?.Value<IPublishedContent>("aboutBackgroundImageLeft")?.Url() ?? "";
+    var globeRight = Model?.Value<IPublishedContent>("aboutBackgroundImageRight")?.Url() ?? "";
+    var aboutAuthor = Model?.Value<IPublishedContent>("authorMemberImage")?.Url() ?? "";
+    var reviewsImage = Model?.Value<IPublishedContent>("reviewsImage")?.Url() ?? "";
+    var expertImageOne = Model?.Value<IPublishedContent>("expertImageOne")?.Url() ?? "";
+    var expertImageTwo = Model?.Value<IPublishedContent>("expertImageTwo")?.Url() ?? "";
+    var expertImageThree = Model?.Value<IPublishedContent>("expertImageThree")?.Url() ?? "";
+    var expertImageFour = Model?.Value<IPublishedContent>("expertImageFour")?.Url() ?? "";
+    var expertImageFive = Model?.Value<IPublishedContent>("expertImageFive")?.Url() ?? "";
+    var expertImageSix = Model?.Value<IPublishedContent>("expertImageSix")?.Url() ?? "";
+    var expertImageSeven = Model?.Value<IPublishedContent>("expertImageSeven")?.Url() ?? "";
+    var contactBackground = Model?.Value<IPublishedContent>("nextBackground")?.Url() ?? "";
+    var contactMember = Model?.Value<IPublishedContent>("nextMemberImage")?.Url() ?? "";
 }
 
-<h1>@Model.Value("title")</h1>
-<p>@Model.Value("pageDescription")</p>
+<section id="about-welcome" class="about-welcome">
+    <img class="globeLeft" src="@globeLeft" alt="@Model?.Value("aboutBackgroundImageLeft")">
+    <div class="container">
+        <div class="content">
+            <h1>@Model?.Value("aboutWelcomeTitle")</h1>
+            <div class="about-directions">
+                <a href="@Model?.Value("aboutHomeDirectionUrl")"> @Model?.Value("aboutHomeDirection") </a>
+                <i class="fa-solid fa-arrow-right"></i>
+                <p>@Model?.Value("aboutCurrentPage")</p>
+            </div>
+        </div>
+    </div>
+    <img class="globeRight" src="@globeRight" alt="@Model?.Value("aboutBackgroundImageRight")">
+</section>
+
+<section id="about-author" class="about-author">
+    <div class="container">
+        <div class="author-image">
+            <img class="aboutAuthor" src="@aboutAuthor" alt="@Model?.Value("aboutAuthor")">
+            <p>@Model?.Value("authorMemberName")</p>
+        </div>
+        <div class="author-paragraph">
+            <p class="aboutQuote">@Model?.Value("authorTextQuote")</p>
+            <p class="aboutText">@Model?.Value("authorAboutParagraphOne")</p>
+            <p class="aboutText">@Model?.Value("authorAboutParagraphTwo")</p>
+            <p class="aboutText">@Model?.Value("authorAboutParagraphThree")</p>
+            <p class="aboutText">@Model?.Value("authorAboutParagraphFour")</p>
+            <p class="aboutText">@Model?.Value("authorAboutParagraphFive")</p>
+            <p class="aboutText">@Model?.Value("authorAboutParagraphSix")</p>
+            <p class="aboutText">@Model?.Value("authorAboutParagraphSeven")</p>
+        </div>
+    </div>
+</section>
+
+<section id="about-reviews" class="about-reviews">
+    <div class="reviews-content">
+        <div class="container">
+            <div class="review-text">
+                <h5>@Model?.Value("reviewsSectionTitle")</h5>
+                <h2>@Model?.Value("reviewsHeadline")</h2>
+                <p class="reviewsParagraph">@Model?.Value("reviewsParagraph")</p>
+                <div class="review-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="reviewsAuthor">@Model?.Value("reviewsAuthor")</p>
+                <p class="reviewsCompany">@Model?.Value("reviewsCompany")</p>
+            </div>
+        </div>
+    </div>
+
+    <img class="reviewsImage" src="@reviewsImage" alt="@Model?.Value("reviewsImage")">
+</section>
+
+<section id="our-experts" class="our-experts">
+    <div class="container">
+        <div class="headline">
+            <h5>@Model?.Value("expertSectionTitle")</h5>
+            <h2>@Model?.Value("expertHeadline")</h2>
+        </div>
+        <div class="expert-teams">
+            <div class="team-one">
+                <article>
+                    <img class="expert-image" src="@expertImageOne" alt="@Model?.Value("expertImageOne")">
+                    <div class="expert-text">
+                        <h4 class="expert-name">@Model?.Value("expertNameOne")</h4>
+                        <p class="expert-title">@Model?.Value("expertTitleOne")</p>
+                    </div>
+                </article>
+                <article>
+                    <img class="expert-image" src="@expertImageTwo" alt="@Model?.Value("expertImageTwo")">
+                    <div class="expert-text">
+                        <h4 class="expert-name">@Model?.Value("expertNameTwo")</h4>
+                        <p class="expert-title">@Model?.Value("expertTitleTwo")</p>
+                    </div>
+                </article>
+                <article>
+                    <img class="expert-image" src="@expertImageThree" alt="@Model?.Value("expertImageThree")">
+                    <div class="expert-text">
+                        <h4 class="expert-name">@Model?.Value("expertNameThree")</h4>
+                        <p class="expert-title">@Model?.Value("expertTitleThree")</p>
+                    </div>
+                </article>
+            </div>
+            <div class="team-two">
+                <article>
+                    <img class="expert-image" src="@expertImageFour" alt="@Model?.Value("expertImageFour")">
+                    <div class="expert-text">
+                        <h4 class="expert-name">@Model?.Value("expertNameFour")</h4>
+                        <p class="expert-title">@Model?.Value("expertTitleFour")</p>
+                    </div>
+                </article>
+                <article>
+                    <img class="expert-image" src="@expertImageFive" alt="@Model?.Value("expertImageFive")">
+                    <div class="expert-text">
+                        <h4 class="expert-name">@Model?.Value("expertNameFive")</h4>
+                        <p class="expert-title">@Model?.Value("expertTitleFive")</p>
+                    </div>
+                </article>
+                <article>
+                    <img class="expert-image" src="@expertImageSix" alt="@Model?.Value("expertImageSix")">
+                    <div class="expert-text">
+                        <h4 class="expert-name">@Model?.Value("expertNameSix")</h4>
+                        <p class="expert-title">@Model?.Value("expertTitleSix")</p>
+                    </div>
+                </article>
+                <article>
+                    <img class="expert-image" src="@expertImageSeven" alt="@Model?.Value("expertImageSeven")">
+                    <div class="expert-text">
+                        <h4 class="expert-name">@Model?.Value("expertNameSeven")</h4>
+                        <p class="expert-title">@Model?.Value("expertTitleSeven")</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about-contact" class="about-contact">
+    <div class="container">
+        <div class="background-contact">
+            <img class="contactBackground" src="@contactBackground" alt="@Model?.Value("nextBackground")">
+            <img class="contactMember" src="@contactMember" alt="@Model?.Value("nextMemberImage")">
+        </div>
+        <div class="about-contact-info">
+            <h2>@Model?.Value("nextHeadline")</h2>
+            <div class="about-office-location">
+                <p class="example-info"><i class="fa-solid fa-location-dot"></i>Office location</p>
+                <p class="office-info">@Model?.Value("nextOfficeLocation")</p>
+            </div>
+            <div class="about-office-location">
+                <p class="example-info"><i class="fa-solid fa-phone-flip"></i>Phone number</p>
+                <p class="office-info">@Model?.Value("nextPhoneNumber")</p>
+            </div>
+            <div class="about-office-location">
+                <p class="example-info"><i class="fa-regular fa-envelope"></i>E-mail address</p>
+                <p class="office-info">@Model?.Value("nextEmail")</p>
+            </div>
+        </div>
+    </div>
+</section>

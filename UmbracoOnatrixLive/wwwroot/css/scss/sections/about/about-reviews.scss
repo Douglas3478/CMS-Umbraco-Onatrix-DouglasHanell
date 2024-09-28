@@ -1,0 +1,70 @@
+#about-reviews {
+    position: relative;
+    padding-top: 45px;
+    padding-bottom: 40px;
+    overflow: hidden;
+    background-color: #EAEAEA;
+
+    .reviews-content {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .container {
+            display: flex;
+            z-index: 2;
+
+            .review-text {
+                text-align: left;
+                width: 45%;
+
+                h5 {
+                    color: #D9C3A9;
+                    font-size: 14px;
+                    margin: 0;
+                }
+
+                h2 {
+                    margin: 0;
+                    font-size: 40px;
+                    font-weight: 700;
+                    padding-right: 30px;
+                    padding-bottom: 40px;
+                }
+
+                .reviewsParagraph {
+                    margin: 0;
+                    font-size: 20px;
+                    font-style: italic;
+                    font-weight: 300;
+                }
+
+                .review-stars {
+                    padding-top: 30px;
+                    padding-bottom: 30px;
+                }
+
+                .reviewsAuthor {
+                    font-size: 14px;
+                    margin: 0;
+                }
+
+                .reviewsCompany {
+                    margin: 0;
+                    font-style: italic;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .reviewsImage {
+        position: absolute;
+        top: 0;
+        right: 0; 
+        width: 52%; 
+        height: auto;
+        z-index: 1;
+    }
+}

@@ -1,0 +1,67 @@
+#about-contact {
+    position: relative;
+    overflow: hidden;
+    width: 1920px;
+    height: 713px;
+    background-color: rgba(247, 247, 247, 1);
+    .container {
+        position: relative; // Ensure child elements are positioned relative to this container
+        display: flex;
+        justify-content: space-between;
+
+
+        .background-contact {
+            position: relative;
+            width: 100%;
+            height: auto;
+
+            .contactBackground,
+            .contactMember {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 80px;
+                height: auto;
+            }
+
+            .contactMember {
+                z-index: 1;
+            }
+
+            .contactBackground {
+                z-index: 0;
+            }
+        }
+
+        .about-contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-top: 100px;
+
+            h2 {
+                font-size: 40px;
+            }
+
+            .about-office-location {
+                padding-top: 10px;
+
+                .example-info {
+                    font-size: 14px;
+                    margin: 0;
+                    font-weight: 700;
+
+                    i {
+                        color: #D9C3A9;
+                        padding-right: 10px;
+                    }
+                }
+
+                .office-info {
+                    margin: 0;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
