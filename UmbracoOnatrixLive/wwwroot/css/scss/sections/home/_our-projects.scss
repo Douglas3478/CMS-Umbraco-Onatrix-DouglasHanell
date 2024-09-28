@@ -1,0 +1,102 @@
+#our-projects {
+    position: relative;
+    z-index: 1;
+    padding-top: 170px;
+
+    .container {
+        h5 {
+            color: #D9C3A9;
+            font-size: 14px;
+        }
+
+        h2 {
+            font-size: 40px;
+        }
+    }
+
+    .article-content {
+        display: flex;
+        justify-content: center;
+
+        .project-article {
+            position: relative;
+            overflow: hidden;
+
+            .project-image {
+                max-width: 100%;
+                height: auto;
+                transition: transform 0.3s ease;
+            }
+
+            article {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 20%;
+                background-color: rgba(0, 0, 0, 0.3);
+                padding: 20px;
+                color: white;
+                display: flex;
+                justify-content: space-between;
+                transition: height 0.3s ease, background-color 0.3s ease;
+                z-index: 2;
+
+                .project-content {
+
+
+                    h6 {
+                        font-size: 18px;
+                        padding: 0;
+                        margin: 0;
+                        transition: color 0.3s ease;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        padding: 0;
+                        margin: 0;
+                        transition: color 0.3s ease;
+                    }
+                }
+
+                .project-url {
+                    display: flex;
+                    justify-content: end;
+                    align-items: center;
+
+                    a {
+                        color: white;
+                        font-size: 40px;
+                        opacity: 0;
+                        transition: opacity 0.3s ease;
+                        pointer-events: none;
+                    }
+                }
+            }
+
+            &:hover {
+                .project-image {
+                    transform: scale(1.05);
+                }
+
+                article {
+                    height: 30%;
+                    background-color: #4F5955;
+
+                    .project-content {
+                        h6
+                        {
+                            color: D9C3A9;
+                        }
+                    }
+
+                    .project-url a {
+                        opacity: 1;
+                        pointer-events: auto;
+                    }
+                }
+            }
+        }
+    }
+}

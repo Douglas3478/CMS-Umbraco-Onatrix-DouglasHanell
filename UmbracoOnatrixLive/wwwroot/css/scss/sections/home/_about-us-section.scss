@@ -1,0 +1,34 @@
+#about-us {
+    .container {
+        .content {
+            width: 60%;
+            padding-top: 100px;
+            padding-bottom: 120px;
+            text-align: left;
+
+            .headline {
+                h5 {
+                    font-size: 14px;
+                    color: rgba(217, 195, 169, 1);
+                }
+
+                h2 {
+                    font-size: 40px;
+                }
+            }
+
+            .quote {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            .signature-container {
+                .signature {
+                }
+            }
+        }
+    }
+}
