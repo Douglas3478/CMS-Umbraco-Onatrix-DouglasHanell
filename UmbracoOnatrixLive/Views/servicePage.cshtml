@@ -1,0 +1,106 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "mainLayout.cshtml";
+    ViewBag.Title = Model?.Value("servicePageTitle") ?? null;
+
+
+    var globeLeft = Model?.Value<IPublishedContent>("serviceBackgroundImageLeft")?.Url() ?? "";
+    var globeRight = Model?.Value<IPublishedContent>("serviceBackgroundImageRight")?.Url() ?? "";
+
+    var solutionArticleOne = Model?.Value<IPublishedContent>("solutionImageOne")?.Url() ?? "";
+    var solutionArticleTwo = Model?.Value<IPublishedContent>("solutionArticleImageTwo")?.Url() ?? "";
+    var solutionArticleThree = Model?.Value<IPublishedContent>("solutionArticleImageThree")?.Url() ?? "";
+    var solutionArticleFour = Model?.Value<IPublishedContent>("solutionArticleImageFour")?.Url() ?? "";
+    var solutionArticleFive = Model?.Value<IPublishedContent>("solutionArticleImageFive")?.Url() ?? "";
+    var solutionArticleSix = Model?.Value<IPublishedContent>("solutionArticleImageSix")?.Url() ?? "";
+
+}
+
+<section id="service-welcome" class="about-welcome">
+    <img class="globeLeft" src="@globeLeft" alt="@Model?.Value("serviceBackgroundImageLeft")">
+    <div class="container">
+        <div class="content">
+            <h1>@Model?.Value("serviceWelcomeTitle")</h1>
+            <div class="about-directions">
+                <a href="@Model?.Value("serviceHomeDirectionUrl")"> @Model?.Value("serviceHomeDirection") </a>
+                <i class="fa-solid fa-arrow-right"></i>
+                <p>@Model?.Value("serviceCurrentPage")</p>
+            </div>
+        </div>
+    </div>
+    <img class="globeRight" src="@globeRight" alt="@Model?.Value("serviceBackgroundImageRight")">
+</section>
+
+<section id="articles-solution" class="articles-solution">
+    <div class="container">
+        <div class="content">
+            <div class="headline">
+                
+                <h2>@Model?.Value("solutionHeadline")</h2>
+            </div>
+            <div class="articles">
+                <article>
+                    <h5>@Model?.Value("solutionArticleTitleOne")</h5>
+                    <img class="servicesArticleImgOne" src="@solutionArticleOne" alt="@Model?.Value("solutionArticleOne")">
+                    <p>@Model?.Value("solutionArticleDescriptionOne")</p>
+                </article>
+                <article>
+                    <h5>@Model?.Value("solutionArticleTitleTwo")</h5>
+                    <img class="servicesArticleImgOne" src="@solutionArticleTwo" alt="@Model?.Value("solutionArticleTwo")">
+                    <p>@Model?.Value("solutionArticleDescriptionTwo")</p>
+                </article>
+                <article>
+                    <h5>@Model?.Value("solutionArticleTitleThree")</h5>
+                    <img class="servicesArticleImgOne" src="@solutionArticleThree" alt="@Model?.Value("solutionArticleThree")">
+                    <p>@Model?.Value("solutionArticleDescriptionThree")</p>
+                </article>
+                <article>
+                    <h5>@Model?.Value("solutionArticleTitleFour")</h5>
+                    <img class="servicesArticleImgOne" src="@solutionArticleFour" alt="@Model?.Value("solutionArticleFour")">
+                    <p>@Model?.Value("solutionArticleDescriptionFour")</p>
+                </article>
+                <article>
+                    <h5>@Model?.Value("solutionArticleTitleFive")</h5>
+                    <img class="servicesArticleImgOne" src="@solutionArticleFive" alt="@Model?.Value("solutionArticleFive")">
+                    <p>@Model?.Value("solutionArticleDescriptionFive")</p>
+                </article>
+                <article>
+                    <h5>@Model?.Value("solutionArticleTitleSix")</h5>
+                    <img class="servicesArticleImgOne" src="@solutionArticleSix" alt="@Model?.Value("solutionArticleSix")">
+                    <p>@Model?.Value("solutionArticleDescriptionSix")</p>
+                </article>
+            </div>
+        </div>
+        <div class="article-swiper">
+            <button class="prev-next-1">Prev</button>
+            <button class="pages-1">1</button>
+            <button class="pages-2">2</button>
+            <button class="prev-next-2">Next</button>
+        </div>
+    </div>
+</section>
+
+<section class="about-contact">
+    <div class="container">
+        <div class="background-contact">
+            <img class="contactBackground" src="/images/background-image-about-us.svg">
+            <img class="contactMember" src="/images/about-us-last-member.png">
+        </div>
+        <div class="about-contact-info">
+            <h2>Let us know about your next project</h2>
+            <div class="about-office-location">
+                <p class="example-info"><i class="fa-solid fa-location-dot"></i>Office location</p>
+                <p class="office-info">@Model?.Value("servicesLocation")</p>
+            </div>
+            <div class="about-office-location">
+                <p class="example-info"><i class="fa-solid fa-phone-flip"></i>Phone number</p>
+                <p class="office-info">@Model?.Value("servicesPhone")</p>
+            </div>
+            <div class="about-office-location">
+                <p class="example-info"><i class="fa-regular fa-envelope"></i>E-mail address</p>
+                <p class="office-info">@Model?.Value("servicesEmail")</p>
+            </div>
+        </div>
+    </div>
+</section>

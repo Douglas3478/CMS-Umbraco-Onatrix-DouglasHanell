@@ -1,0 +1,52 @@
+#map-form {
+    position: relative;
+    overflow: visible;
+    height: 748px;
+
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-size: cover;
+        background-position: center;
+        z-index: 1;
+    }
+
+    .container {
+        background-color: white;
+        position: absolute;
+        bottom: -100px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 1170px;
+        height: 567px;
+
+        .form-text {
+            h5 {
+                color: #D9C3A9;
+                font-weight: 700;
+            }
+
+            h2 {
+                font-size: 40px;
+                font-weight: 700;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+        .contact-form {
+            display: grid;  
+            
+            align-items: center;
+        }
+    }
+}

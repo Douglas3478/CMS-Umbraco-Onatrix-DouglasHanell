@@ -1,0 +1,10 @@
+#company-customers {
+    padding-top: 175px;
+    padding-bottom: 75px;
+    background-color: rgba(185, 185, 185, 0.2);
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

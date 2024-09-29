@@ -1,0 +1,61 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var articleTitleOne = Model?.Content.Value<string>("servicesArticleTitleOne");
+    var articleImageOne = Model?.Content.Value<IPublishedContent>("servicesArticleImgOne")?.Url();
+    var articleDescriptionOne = Model?.Content.Value<string>("servicesArticleDescriptionOne");
+
+    var articleTitleTwo = Model?.Content.Value<string>("servicesArticleTitleTwo");
+    var articleImageTwo = Model?.Content.Value<IPublishedContent>("servicesArticleImgTwo")?.Url();
+    var articleDescriptionTwo = Model?.Content.Value<string>("servicesArticleDescriptionTwo");
+
+    var articleTitleThree = Model?.Content.Value<string>("servicesArticleTitleThree");
+    var articleImageThree = Model?.Content.Value<IPublishedContent>("servicesArticleImgThree")?.Url();
+    var articleDescriptionThree = Model?.Content.Value<string>("servicesArticleDescriptionThree");
+
+    var articleTitleFour = Model?.Content.Value<string>("servicesArticleTitleFour");
+    var articleImageFour = Model?.Content.Value<IPublishedContent>("servicesArticleImgFour")?.Url();
+    var articleDescriptionFour = Model?.Content.Value<string>("servicesArticleDescriptionFour");
+
+    var articleTitleFive = Model?.Content.Value<string>("servicesArticleTitleFive");
+    var articleImageFive = Model?.Content.Value<IPublishedContent>("servicesArticleImgFive")?.Url();
+    var articleDescriptionFive = Model?.Content.Value<string>("servicesArticleDescriptionFive");
+
+    var articleTitleSix = Model?.Content.Value<string>("servicesArticleTitleSix");
+    var articleImageSix = Model?.Content.Value<IPublishedContent>("servicesArticleImgSix")?.Url();
+    var articleDescriptionSix = Model?.Content.Value<string>("servicesArticleDescriptionSix");
+}
+
+<div class="articles">
+    <article>
+        <h5>@articleTitleOne</h5>
+        <img class="servicesArticleImgOne" src="@articleImageOne" alt="@articleTitleOne">
+        <p>@articleDescriptionOne</p>
+    </article>
+    <article>
+        <h5>@articleTitleTwo</h5>
+        <img class="servicesArticleImgTwo" src="@articleImageTwo" alt="@articleTitleTwo">
+        <p>@articleDescriptionTwo</p>
+    </article>
+    <article>
+        <h5>@articleTitleThree</h5>
+        <img class="servicesArticleImgThree" src="@articleImageThree" alt="@articleTitleThree">
+        <p>@articleDescriptionThree</p>
+    </article>
+    <article>
+        <h5>@articleTitleFour</h5>
+        <img class="servicesArticleImgFour" src="@articleImageFour" alt="@articleTitleFour">
+        <p>@articleDescriptionFour</p>
+    </article>
+    <article>
+        <h5>@articleTitleFive</h5>
+        <img class="servicesArticleImgFive" src="@articleImageFive" alt="@articleTitleFive">
+        <p>@articleDescriptionFive</p>
+    </article>
+    <article>
+        <h5>@articleTitleSix</h5>
+        <img class="servicesArticleImgSix" src="@articleImageSix" alt="@articleTitleSix">
+        <p>@articleDescriptionSix</p>
+    </article>
+</div>
