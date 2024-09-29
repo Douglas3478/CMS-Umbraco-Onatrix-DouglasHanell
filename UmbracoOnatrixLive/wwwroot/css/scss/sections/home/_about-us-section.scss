@@ -1,10 +1,16 @@
 #about-us {
+    position: relative;
+    overflow: visible;
+
     .container {
+        display: flex;
+
         .content {
             width: 60%;
             padding-top: 100px;
             padding-bottom: 120px;
             text-align: left;
+
 
             .headline {
                 h5 {
@@ -27,6 +33,101 @@
 
             .signature-container {
                 .signature {
+                }
+            }
+        }
+
+        .contact-form {
+            position: absolute;
+            top: -90px;
+            left: 750px;
+            right: 0;
+            bottom: 0;
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+            width: 470px;
+            height: 572px;
+            border: 1px solid lightgrey;
+
+            .form-title {
+                background-color: #4F5955;
+                height: 100px;
+                align-content: center;
+
+                h3 {
+                    padding-left: 20px;
+                    font-size: 30px;
+                    color: #F2EDDC;
+                    margin: 0;
+                }
+            }
+
+            .form-about-us {
+                padding: 20px;
+
+                p {
+                    margin: 0;
+                    padding-bottom: 20px;
+                }
+
+                .form-request {
+                    form {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+
+                        input {
+                            padding: 17px;
+                            box-sizing: border-box;
+                            font-style: italic;
+                            border: 1px solid lightgrey;
+                        }
+
+                        .input-with-icon {
+                            position: relative;
+
+                            input {
+                                font-style: normal;
+                                width: 100%;
+                                padding-right: 30px;
+                                font-style: normal;
+                            }
+
+                            i {
+                                position: absolute;
+                                top: 50%;
+                                right: 10px;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                }
+            }
+            .submit-contact {
+                @include btn;
+                background-color: #F2EDDC;
+                color: #4F5955;
+                width: 100%;
+                border: none;
+                text-align: center;
+                
+
+
+
+                &:hover {
+                    background-color: #4F5955;
+                    color: #F2EDDC;
+                }
+
+                button {
+                    background: none;
+                    border: none;
+                    padding: 0;
+                    margin: 0;
+                    font: inherit;
+                    color: inherit;
+                    cursor: pointer;
                 }
             }
         }

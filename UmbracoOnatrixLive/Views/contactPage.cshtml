@@ -21,7 +21,7 @@
         <div class="content">
             <h1>@Model?.Value("contactWelcomeTitle")</h1>
             <div class="about-directions">
-                <a href="@Model?.Value("contactHomeDirectionUrl")"> @Model?.Value("contactHomeDirection") </a>
+                <a href="@Model?.Value("contactHomeUrl")"> @Model?.Value("contactHomeDirection") </a>
                 <i class="fa-solid fa-arrow-right"></i>
                 <p>@Model?.Value("contactCurrentPage")</p>
             </div>
@@ -64,13 +64,21 @@
         </div>
         <div class="contact-form">
             <form>
-                <input type="text" placeholder="name" name="name" />
-                <input type="text" placeholder="name" name="name" />
-                <input type="text" placeholder="name" name="name" />
-                <input type="text" placeholder="Financial consulting" name="menu" />
-                <i class="fa-solid fa-caret-down"></i>
-                <button type="submit">Submit</button>
+                <div class="form-row">
+                    <input type="text" placeholder="Name" name="name" />
+                    <input type="text" placeholder="Phone" name="phone" />
+                </div>
+                <div class="form-row">
+                    <input type="text" placeholder="Email Address" name="email" />
+                    <div class="input-with-icon">
+                        <input type="text" placeholder="Financial consulting" name="menu" />
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
             </form>
+        </div>
+        <div class="submit-contact">
+            <button>Submit</button>
         </div>
     </div>
 </section>

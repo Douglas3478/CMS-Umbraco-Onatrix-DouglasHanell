@@ -29,24 +29,92 @@
         height: 567px;
 
         .form-text {
+            padding-top: 80px;
+            width: 50%;
+
             h5 {
                 color: #D9C3A9;
                 font-weight: 700;
+                margin: 0;
             }
 
             h2 {
+                margin: 0;
                 font-size: 40px;
+                line-height: 50px;
                 font-weight: 700;
             }
 
             p {
+                margin: 0;
                 font-size: 14px;
+                line-height: 20px;
+                font-style: italic;
+                padding-top: 25px;
             }
         }
+
         .contact-form {
-            display: grid;  
-            
-            align-items: center;
+            width: 100%;
+            padding: 40px;
+            padding-top: 0;
+            padding-bottom: 0;
+
+            form {
+
+                .form-row {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 20px;
+                    padding-top: 20px;
+
+
+                    input {
+                        padding: 17px;
+                        box-sizing: border-box;
+                        font-style: italic;
+                        border: 1px solid lightgrey;
+                    }
+
+                    .input-with-icon {
+                        position: relative;
+
+                        input {
+                            width: 100%;
+                            padding-right: 30px;
+                            font-style: normal;
+                        }
+
+                        i {
+                            position: absolute;
+                            top: 50%;
+                            right: 10px;
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+            }
+        }
+
+        .submit-contact {
+            @include btn;
+            background-color: #4F5955;
+            color: #F2EDDC;
+
+            &:hover {
+                background-color: #F2EDDC;
+                color: #4F5955;
+            }
+
+            button {
+                background: none;
+                border: none;
+                padding: 0;
+                margin: 0;
+                font: inherit;
+                color: inherit;
+                cursor: pointer;
+            }
         }
     }
 }
