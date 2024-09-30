@@ -1,0 +1,132 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "mainLayout.cshtml";
+    ViewBag.Title = Model?.Value("servicePageTitle") ?? null;
+
+
+    var globeLeft = Model?.Value<IPublishedContent>("detailsBackgroundLeft")?.Url() ?? "";
+    var globeRight = Model?.Value<IPublishedContent>("detailsBackgroundRight")?.Url() ?? "";
+    var articleFirst = Model?.Value<IPublishedContent>("articleSummaryImage")?.Url() ?? "";
+    var articleSecond = Model?.Value<IPublishedContent>("articleMiddleImage")?.Url() ?? "";
+}
+
+<section id="service-welcome" class="about-welcome">
+    <img class="globeLeft" src="@globeLeft" alt="@Model?.Value("detailsBackgroundLeft")">
+    <div class="container">
+        <div class="content">
+            <h1>@Model?.Value("detailsWelcomeText")</h1>
+            <div class="about-directions">
+                <a href="@Model?.Value("detailsHomeUrl")"> @Model?.Value("detailsHomeDirection") </a>
+                <i class="fa-solid fa-arrow-right"></i>
+                <a href="@Model?.Value("detailsServiceUrl")"> @Model?.Value("detailsServicesPage") </a>
+                <i class="fa-solid fa-arrow-right"></i>
+                <p>@Model?.Value("detailsCurrentPage")</p>
+            </div>
+        </div>
+    </div>
+    <img class="globeRight" src="@globeRight" alt="@Model?.Value("detailsBackgroundRight")">
+</section>
+
+<section id="risk-management" class="risk-management">
+    <div class="container">
+        <div class="article-left">
+             <div class="risk-about-us">
+                <div class="risk-about-us-text">
+                    <h4>About us</h4>
+                    <img src="/images/service-details-about.svg" />
+                    <p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non </p>
+                </div>
+                <div class="form-assist">
+                    <h2>How can we help you?</h2>
+                    <p>online support 24/7, we are here to help you</p>
+                    <form>
+                        <div class="email-form">
+                            <input type="text" placeholder="Email address" name="mail" required>
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="management-article">
+            <div class="management-article-content">
+                <div class="article-start">
+                    <img class="article-images" src="@articleFirst" alt="@Model?.Value("articleSummaryImage")">
+                    <h4>@Model?.Value("articleSummarySection")</h4>
+                    <ul>
+                        <li>@Model?.Value("articleSummaryListOne")</li>
+                        <li>@Model?.Value("articleSummaryListTwo")</li>
+                        <li>@Model?.Value("articleSummaryListThree")</li>
+                    </ul>
+                </div>
+                <div class="article-middle">
+                    <h4>@Model?.Value("articleMiddleTitle")</h4>
+                    <p>@Model?.Value("articleMiddleTextOne")</p>
+                    <p>@Model?.Value("articleMiddleTextTwo")</p>
+                    <p>@Model?.Value("articleMiddleTextThree")</p>
+                    <ul>
+                        <li>@Model?.Value("articleMiddleListOne")</li>
+                        <li>@Model?.Value("articleMiddleListTwo")</li>
+                        <li>@Model?.Value("articleMiddleListThree")</li>
+                    </ul>
+                    <p>@Model?.Value("articleMiddleTextFour")</p>
+                    <p>@Model?.Value("articleMiddleTextFive")</p>
+                </div>
+                <div class="article-end">
+                    <img class="article-images" src="@articleSecond" alt="@Model?.Value("articleMiddleImage")">
+                    <h4>@Model?.Value("articleEndTitle")</h4>
+                    <p>@Model?.Value("articleEndTextOne")</p>
+                    <ul>
+                        <li>@Model?.Value("articleEndListOne")</li>
+                        <li>@Model?.Value("articleEndListTwo")</li>
+                        <li>@Model?.Value("articleEndListThree")</li>
+                        <li>@Model?.Value("articleEndListFour")</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="article-end-form">
+    <div class="container">
+        <h3>Have a question ?</h3>
+        <form>
+            <div class="email-form">
+                <input type="text" placeholder="Name" name="name" required>
+                <input type="text" placeholder="Email" name="email" required>
+            </div>
+            <div class="question">
+                <textarea name="message" rows="10"  placeholder="Question" required></textarea>
+            </div>
+        </form>
+        <div class="submit-contact">
+            <button>Submit</button>
+        </div>
+    </div>
+</section>
+
+<section class="about-contact">
+    <div class="container">
+        <div class="background-contact">
+            <img class="contactBackground" src="/images/background-image-about-us.svg">
+            <img class="contactMember" src="/images/about-us-last-member.png">
+        </div>
+        <div class="about-contact-info">
+            <h2>Let us know about your next project</h2>
+            <div class="about-office-location">
+                <p class="example-info"><i class="fa-solid fa-location-dot"></i>Office location</p>
+                <p class="office-info">@Model?.Value("detailsLocation")</p>
+            </div>
+            <div class="about-office-location">
+                <p class="example-info"><i class="fa-solid fa-phone-flip"></i>Phone number</p>
+                <p class="office-info">@Model?.Value("detailsPhone")</p>
+            </div>
+            <div class="about-office-location">
+                <p class="example-info"><i class="fa-regular fa-envelope"></i>E-mail address</p>
+                <p class="office-info">@Model?.Value("detailsEmail")</p>
+            </div>
+        </div>
+    </div>
+</section>

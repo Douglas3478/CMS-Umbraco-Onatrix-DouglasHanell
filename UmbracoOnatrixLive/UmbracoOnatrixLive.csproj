@@ -7,9 +7,11 @@
   <ItemGroup>
     <Content Remove="compilerconfig.json" />
     <Content Remove="wwwroot\css\scss\sections\about\_about-author.scss" />
+    <Content Remove="wwwroot\css\scss\sections\services\articles\_risk-management.scss" />
   </ItemGroup>
   <ItemGroup>
     <_ContentIncludedByDefault Remove="wwwroot\css\scss\sections\about\_about-author.scss" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\scss\sections\services\articles\_risk-management.scss" />
   </ItemGroup>
 
   <ItemGroup>
@@ -29,6 +31,7 @@
   <ItemGroup>
     <None Include="compilerconfig.json" />
     <None Include="wwwroot\css\scss\sections\about\_about-author.scss" />
+    <None Include="wwwroot\css\scss\sections\services\articles\_risk-management.scss" />
   </ItemGroup>
 
   <PropertyGroup>

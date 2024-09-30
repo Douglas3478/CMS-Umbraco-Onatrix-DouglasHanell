@@ -1,0 +1,65 @@
+.article-end-form {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .container {
+        h3 {
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        form {
+
+
+
+            .email-form {
+                display: flex;
+                gap: 40px;
+                padding-bottom: 25px;
+
+                input {
+                    border: 1px solid rgba(128, 128, 128, 0.3);
+                    padding: 17px;
+                    box-sizing: border-box;
+                    font-style: italic;
+                    width: 100%;
+                }
+            }
+
+            .question {
+                padding-bottom: 10px;
+
+                textarea {
+                    border: 1px solid rgba(128, 128, 128, 0.3);
+                    padding: 17px;
+                    box-sizing: border-box;
+                    font-style: italic;
+                    width: 100%;
+                    resize: none;
+                }
+            }
+        }
+
+        .submit-contact {
+            @include btn;
+            background-color: #4F5955;
+            color: #F2EDDC;
+            
+
+            &:hover {
+                background-color: #F2EDDC;
+                color: #4F5955;
+            }
+
+            button {
+                background: none;
+                border: none;
+                padding: 0;
+                margin: 0;
+                font: inherit;
+                color: inherit;
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1010,6 +1010,175 @@ header .navbar .container .search i:hover {
   height: 40px;
 }
 
+#risk-management .container {
+  display: flex;
+  gap: 50px;
+}
+#risk-management .container .article-left {
+  border-right: 1px solid rgba(128, 128, 128, 0.3);
+  padding-right: 50px;
+}
+#risk-management .container .article-left .risk-about-us .risk-about-us-text {
+  padding-bottom: 45px;
+}
+#risk-management .container .article-left .risk-about-us .risk-about-us-text h4 {
+  font-size: 22px;
+}
+#risk-management .container .article-left .risk-about-us .risk-about-us-text p {
+  padding-top: 10px;
+  font-size: 14px;
+  line-height: 23px;
+  width: 300px;
+}
+#risk-management .container .article-left .risk-about-us .form-assist {
+  background-color: #4F5955;
+  padding: 10px;
+  width: 300px;
+  height: 223px;
+}
+#risk-management .container .article-left .risk-about-us .form-assist h2 {
+  color: #D9C3A9;
+  margin: 0;
+  padding-bottom: 15px;
+}
+#risk-management .container .article-left .risk-about-us .form-assist p {
+  margin: 0;
+  color: rgb(196, 196, 196);
+  padding-bottom: 40px;
+}
+#risk-management .container .article-left .risk-about-us .form-assist form .email-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+#risk-management .container .article-left .risk-about-us .form-assist form .email-form input {
+  width: 100%;
+  padding: 10px 40px 10px 10px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+  font-style: italic;
+}
+#risk-management .container .article-left .risk-about-us .form-assist form .email-form i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  font-weight: 600;
+}
+#risk-management .container .management-article .management-article-content .article-start h4,
+#risk-management .container .management-article .management-article-content .article-middle h4,
+#risk-management .container .management-article .management-article-content .article-end h4 {
+  font-size: 25px;
+  font-weight: 700;
+  margin: 0;
+}
+#risk-management .container .management-article .management-article-content .article-start p,
+#risk-management .container .management-article .management-article-content .article-middle p,
+#risk-management .container .management-article .management-article-content .article-end p {
+  font-size: 14px;
+  line-height: 25px;
+  margin: 0;
+  padding-bottom: 15px;
+}
+#risk-management .container .management-article .management-article-content .article-start ul,
+#risk-management .container .management-article .management-article-content .article-middle ul,
+#risk-management .container .management-article .management-article-content .article-end ul {
+  margin: 0;
+  padding: 15px;
+  padding-right: 0;
+}
+#risk-management .container .management-article .management-article-content .article-start ul li,
+#risk-management .container .management-article .management-article-content .article-middle ul li,
+#risk-management .container .management-article .management-article-content .article-end ul li {
+  color: #535656;
+  font-size: 14px;
+  line-height: 25px;
+  padding: 5px;
+}
+#risk-management .container .management-article .management-article-content .article-start ul li::marker,
+#risk-management .container .management-article .management-article-content .article-middle ul li::marker,
+#risk-management .container .management-article .management-article-content .article-end ul li::marker {
+  color: #D9C3A9;
+}
+#risk-management .container .management-article .management-article-content .article-start h4 {
+  padding-top: 30px;
+}
+#risk-management .container .management-article .management-article-content .article-middle h4 {
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+#risk-management .container .management-article .management-article-content .article-end h4 {
+  padding-top: 30px;
+}
+#risk-management .container .management-article .management-article-content .article-end ul {
+  padding-top: 0;
+}
+
+.article-end-form {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.article-end-form .container h3 {
+  font-size: 25px;
+  font-weight: 700;
+}
+.article-end-form .container form .email-form {
+  display: flex;
+  gap: 40px;
+  padding-bottom: 25px;
+}
+.article-end-form .container form .email-form input {
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  padding: 17px;
+  box-sizing: border-box;
+  font-style: italic;
+  width: 100%;
+}
+.article-end-form .container form .question {
+  padding-bottom: 10px;
+}
+.article-end-form .container form .question textarea {
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  padding: 17px;
+  box-sizing: border-box;
+  font-style: italic;
+  width: 100%;
+  resize: none;
+}
+.article-end-form .container .submit-contact {
+  border-radius: 3px;
+  font-size: 16px;
+  padding: 15px 40px;
+  display: inline-block;
+  gap: 12px;
+  border: 1px solid;
+  cursor: pointer;
+  transition: 0.25s;
+  text-decoration: none !important;
+  background-color: #4F5955;
+  color: #F2EDDC;
+}
+.article-end-form .container .submit-contact:hover {
+  transition: 0.25s;
+  text-decoration: none;
+}
+.article-end-form .container .submit-contact:hover {
+  background-color: #F2EDDC;
+  color: #4F5955;
+}
+.article-end-form .container .submit-contact button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
 #projects-welcome {
   position: relative;
   overflow: hidden;
