@@ -1,0 +1,130 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "mainLayout.cshtml";
+    ViewBag.Title = Model?.Value("aboutPageTitle") ?? null;
+
+    var globeLeft = Model?.Value<IPublishedContent>("reportImageLeft")?.Url() ?? "";
+    var globeRight = Model?.Value<IPublishedContent>("reportImageRight")?.Url() ?? "";
+    var reportStart = Model?.Value<IPublishedContent>("projectImageTop")?.Url() ?? "";
+    var reportMiddle = Model?.Value<IPublishedContent>("projectMiddleImage")?.Url() ?? "";
+    var ReportEnd = Model?.Value<IPublishedContent>("projectEndImage")?.Url() ?? "";
+
+}
+
+<section id="report-welcome" class="report-welcome">
+    <img class="globeLeft" src="@globeLeft" alt="@Model?.Value("reportImageLeft")">
+    <div class="container">
+        <div class="content">
+            <h1>@Model?.Value("reportWelcomeTitle")</h1>
+            <div class="about-directions">
+                <a href="@Model?.Value("reportHomeDestinationUrl")"> @Model?.Value("reportHomeDestination") </a>
+                <i class="fa-solid fa-arrow-right"></i>
+                <a href="@Model?.Value("reportLastPageUrl")"> @Model?.Value("reportLastPage") </a>
+                <i class="fa-solid fa-arrow-right"></i>
+                <p>@Model?.Value("reportCurrentPage")</p>
+            </div>
+        </div>
+    </div>
+    <img class="globeRight" src="@globeRight" alt="@Model?.Value("reportImageRight")">
+</section>
+
+
+<section id="annual-report-juva" class="annual-report-juva">
+    <div class="container">
+        <div class="report-article">
+            <div class="report-article-content">
+                <div class="report-start">
+                    <p><i class="fa-solid fa-calendar-days"></i>@Model?.Value("projectDate")</p>
+                    <p class="article-ingress">@Model?.Value("projectStartTitle")</p>
+                    <img class="reportStart" src="@reportStart" alt="@Model?.Value("projectImageTop")">
+                    <h4>@Model?.Value("projectTopTitle")</h4>
+                    <ul>
+                        <li>@Model?.Value("projectTopListOne")</li>
+                        <li>@Model?.Value("projectTopListTwo")</li>
+                        <li>@Model?.Value("projectTopListThree")</li>
+                    </ul>
+                </div>
+                <div class="report-middle">
+                    <div class="middle-start">
+                        <div class="middle-image">
+                            <img class="reportMiddle" src="@reportMiddle" alt="@Model?.Value("projectMiddleImage")">
+                        </div>
+                        <div class="middle-start-text">
+                            <h4>@Model?.Value("projectMiddleTitle")</h4>
+                            <p class="article-ingress">@Model?.Value("projectMiddleTextOne")</p>
+                            <p class="article-ingress">@Model?.Value("projectMiddleTextTwo")</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="report-end">
+                    <h4 class="end-start-title">@Model?.Value("projectMiddleTitleTwo")</h4>
+                    <p class="article-ingress">@Model?.Value("projectMiddleTextThree")</p>
+                    <p class="article-ingress">@Model?.Value("projectMiddleTextFour")</p>
+                    <p class="article-ingress">@Model?.Value("projectMiddleTextFive")</p>
+                    <img class="ReportEnd" src="@ReportEnd" alt="@Model?.Value("projectEndImage")">
+                    <h4 class="end-title">@Model?.Value("projectEndTitle")</h4>
+                    <p class="article-ingress">@Model?.Value("projectEndTextOne")</p>
+                    <p class="article-ingress">@Model?.Value("projectEndTextTwo")</p>
+                </div>
+            </div>
+            <div class="tags-bottom">
+                <h2>Tags:</h2>
+                <div class="article-tags">
+                    <button>Business</button>
+                    <button>Consulting</button>
+                    <button>Onatrix</button>
+                </div>
+            </div>
+        </div>
+        <div class="projects-right">
+            <div class="tags">
+                <h2>Tags</h2>
+                <div class="tag-buttons">
+                    <button>Report</button>
+                    <button>Busines plans</button>
+                    <button>Insights</button>
+                    <button>Business</button>
+                    <button>App</button>
+                    <button>Project</button>
+                    <button>Finance</button>
+                    <button>Pricing</button>
+                </div>
+            </div>
+            <div class="form-assist">
+                <h2>How can we help you?</h2>
+                <p>online support 24/7, we are here to help you</p>
+                <form>
+                    <div class="email-form">
+                        <input type="text" placeholder="Email address" name="mail" required>
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about-contact">
+    <div class="container">
+        <div class="background-contact">
+            <img class="contactBackground" src="/images/background-image-about-us.svg">
+            <img class="contactMember" src="/images/about-us-last-member.png">
+        </div>
+        <div class="about-contact-info">
+            <h2>Let us know about your next project</h2>
+            <div class="about-office-location">
+                <p class="example-info"><i class="fa-solid fa-location-dot"></i>Office location</p>
+                <p class="office-info">@Model?.Value("reportLocation")</p>
+            </div>
+            <div class="about-office-location">
+                <p class="example-info"><i class="fa-solid fa-phone-flip"></i>Phone number</p>
+                <p class="office-info">@Model?.Value("reportPhone")</p>
+            </div>
+            <div class="about-office-location">
+                <p class="example-info"><i class="fa-regular fa-envelope"></i>E-mail address</p>
+                <p class="office-info">@Model?.Value("reportEmail")</p>
+            </div>
+        </div>
+    </div>
+</section>

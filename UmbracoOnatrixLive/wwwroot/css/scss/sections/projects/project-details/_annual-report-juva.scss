@@ -1,0 +1,258 @@
+#annual-report-juva {
+    padding-top: 100px;
+    padding-bottom: 70px;
+    .container {
+        display: flex;
+        gap: 50px;
+
+        .report-article {
+            padding-right: 30px;
+
+            .report-article-content {
+
+                .report-start {
+                    p {
+                        font-size: 14px;
+                        line-height: 25px;
+                        margin: 0;
+                        padding-bottom: 15px;
+                        color: #9C9EA6;
+
+                        i {
+                            padding-right: 10px;
+                        }
+                    }
+
+                    .article-ingress {
+                        font-weight: 700;
+                        color: #4F5955;
+                    }
+
+                    img {
+                        width: 100%;
+                    }
+
+                    h4 {
+                        padding-top: 30px;
+                        font-size: 18px;
+                        font-weight: 700;
+                        margin: 0;
+                    }
+
+                    ul {
+                        margin: 0;
+                        padding: 15px;
+                        padding-right: 0;
+
+
+                        li {
+                            color: #535656;
+                            font-size: 14px;
+                            line-height: 25px;
+                            padding: 5px;
+
+
+                            &::marker {
+                                color: #5D8C87;
+                            }
+                        }
+                    }
+                }
+
+                .report-middle {
+
+
+                    .middle-start {
+                        display: flex;
+                        gap: 30px;
+
+                        .middle-image {
+                            padding-top: 5px;
+                        }
+
+                        .middle-start-text {
+
+
+
+                            h4 {
+                                font-size: 18px;
+                                font-weight: 700;
+                                margin: 0;
+                            }
+
+                            p {
+                                font-size: 14px;
+                                line-height: 25px;
+                                margin: 0;
+                                padding-bottom: 15px;
+                            }
+                        }
+                    }
+                }
+
+                .report-end {
+                    padding-bottom: 60px;
+
+                    h4 {
+                        font-size: 18px;
+                        font-weight: 700;
+                        margin: 0;
+                        padding-bottom: 15px;
+                        padding-top: 15px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        line-height: 25px;
+                        margin: 0;
+                        padding-bottom: 15px;
+                    }
+                }
+            }
+        }
+
+        .tags-bottom {
+            margin-bottom: 20px;
+            padding-bottom: 45px;
+            display: flex;
+            gap: 15px;
+            align-content: center;
+
+            h2 {
+                margin: 0;
+                font-weight: 600;
+                font-size: 14px;
+                padding-top: 5px;
+            }
+
+            .article-tags {
+                display: flex;
+                gap: 15px;
+                align-items: center;
+
+                button {
+                    padding: 7px;
+                    border-radius: 20px;
+                    border: 1px solid rgba(128, 128, 128, 0.3);
+                    background-color: #D9C3A9;
+                    color: #4F5955;
+                    cursor: pointer;
+                    font-size: 13px;
+                    transition: background-color 0.3s;
+                    font-size: 13px;
+
+                    &:hover {
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+
+        .projects-right {
+            border-left: 1px solid rgba(128, 128, 128, 0.3);
+            padding-left: 30px;
+
+            .tags {
+                margin-bottom: 20px;
+                padding-bottom: 45px;
+
+                h2 {
+                    margin: 0;
+                    font-weight: 500;
+                    font-size: 22px;
+                    padding-bottom: 30px;
+                }
+
+                .tag-buttons {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 10px;
+
+                    button {
+                        padding: 7px;
+                        border-radius: 20px;
+                        border: 1px solid rgba(128, 128, 128, 0.3);
+                        background-color: transparent;
+                        color: #4F5955;
+                        cursor: pointer;
+                        font-size: 13px;
+                        transition: background-color 0.3s;
+
+                        &:hover {
+                            background-color: #D9C3A9;
+                        }
+                    }
+
+                    button:nth-child(2),
+                    button:nth-child(9) {
+                        grid-column: span 2;
+                    }
+
+                    button:nth-child(4),
+                    button:nth-child(5),
+                    button:nth-child(6)
+                    button:nth-child(1) {
+                        grid-column: span 1;
+                    }
+
+                    button:nth-child(7),
+                    button:nth-child(8) {
+                        grid-column: span 2;
+                    }
+
+                    button:nth-child(9) {
+                        grid-column: span 3;
+                    }
+                }
+            }
+
+
+            .form-assist {
+                background-color: #4F5955;
+                padding: 10px;
+                width: 300px;
+                height: 223px;
+
+
+                h2 {
+                    color: #D9C3A9;
+                    margin: 0;
+                    padding-bottom: 15px;
+                }
+
+                p {
+                    margin: 0;
+                    color: rgba(196, 196, 196, 1);
+                    padding-bottom: 40px;
+                }
+
+                form {
+                    .email-form {
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+
+                        input {
+                            width: 100%;
+                            padding: 10px 40px 10px 10px;
+                            border-radius: 3px;
+                            border: 1px solid #ccc;
+                            font-size: 16px;
+                            box-sizing: border-box;
+                            font-style: italic;
+                        }
+
+                        i {
+                            position: absolute;
+                            right: 10px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            font-size: 18px;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

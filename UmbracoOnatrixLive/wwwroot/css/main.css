@@ -1429,6 +1429,262 @@ header .navbar .container .search i:hover {
   font-weight: 600;
 }
 
+#report-welcome {
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(247, 247, 247);
+  padding-bottom: 80px;
+  padding-top: 60px;
+}
+#report-welcome .globeLeft {
+  position: absolute;
+  bottom: 80px;
+  left: 900px;
+  z-index: 1;
+}
+#report-welcome .container {
+  position: relative;
+  z-index: 2;
+}
+#report-welcome .container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#report-welcome .container .content h1 {
+  font-size: 40px;
+}
+#report-welcome .container .content .about-directions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+#report-welcome .container .content .about-directions a {
+  text-decoration: none;
+  color: #4F5955;
+  font-size: 14px;
+}
+#report-welcome .container .content .about-directions i {
+  color: #4F5955;
+}
+#report-welcome .container .content .about-directions p {
+  font-size: 14px;
+  color: #D9C3A9;
+  padding: 0;
+  margin: 0;
+}
+#report-welcome .globeRight {
+  position: absolute;
+  bottom: -90px;
+  left: -40px;
+  transform: rotate(190deg);
+  z-index: 1;
+}
+
+#annual-report-juva {
+  padding-top: 100px;
+  padding-bottom: 70px;
+}
+#annual-report-juva .container {
+  display: flex;
+  gap: 50px;
+}
+#annual-report-juva .container .report-article {
+  padding-right: 30px;
+}
+#annual-report-juva .container .report-article .report-article-content .report-start p {
+  font-size: 14px;
+  line-height: 25px;
+  margin: 0;
+  padding-bottom: 15px;
+  color: #9C9EA6;
+}
+#annual-report-juva .container .report-article .report-article-content .report-start p i {
+  padding-right: 10px;
+}
+#annual-report-juva .container .report-article .report-article-content .report-start .article-ingress {
+  font-weight: 700;
+  color: #4F5955;
+}
+#annual-report-juva .container .report-article .report-article-content .report-start img {
+  width: 100%;
+}
+#annual-report-juva .container .report-article .report-article-content .report-start h4 {
+  padding-top: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+#annual-report-juva .container .report-article .report-article-content .report-start ul {
+  margin: 0;
+  padding: 15px;
+  padding-right: 0;
+}
+#annual-report-juva .container .report-article .report-article-content .report-start ul li {
+  color: #535656;
+  font-size: 14px;
+  line-height: 25px;
+  padding: 5px;
+}
+#annual-report-juva .container .report-article .report-article-content .report-start ul li::marker {
+  color: #5D8C87;
+}
+#annual-report-juva .container .report-article .report-article-content .report-middle .middle-start {
+  display: flex;
+  gap: 30px;
+}
+#annual-report-juva .container .report-article .report-article-content .report-middle .middle-start .middle-image {
+  padding-top: 5px;
+}
+#annual-report-juva .container .report-article .report-article-content .report-middle .middle-start .middle-start-text h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+#annual-report-juva .container .report-article .report-article-content .report-middle .middle-start .middle-start-text p {
+  font-size: 14px;
+  line-height: 25px;
+  margin: 0;
+  padding-bottom: 15px;
+}
+#annual-report-juva .container .report-article .report-article-content .report-end {
+  padding-bottom: 60px;
+}
+#annual-report-juva .container .report-article .report-article-content .report-end h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+#annual-report-juva .container .report-article .report-article-content .report-end p {
+  font-size: 14px;
+  line-height: 25px;
+  margin: 0;
+  padding-bottom: 15px;
+}
+#annual-report-juva .container .tags-bottom {
+  margin-bottom: 20px;
+  padding-bottom: 45px;
+  display: flex;
+  gap: 15px;
+  align-content: center;
+}
+#annual-report-juva .container .tags-bottom h2 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 14px;
+  padding-top: 5px;
+}
+#annual-report-juva .container .tags-bottom .article-tags {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+#annual-report-juva .container .tags-bottom .article-tags button {
+  padding: 7px;
+  border-radius: 20px;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  background-color: #D9C3A9;
+  color: #4F5955;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background-color 0.3s;
+  font-size: 13px;
+}
+#annual-report-juva .container .tags-bottom .article-tags button:hover {
+  background-color: transparent;
+}
+#annual-report-juva .container .projects-right {
+  border-left: 1px solid rgba(128, 128, 128, 0.3);
+  padding-left: 30px;
+}
+#annual-report-juva .container .projects-right .tags {
+  margin-bottom: 20px;
+  padding-bottom: 45px;
+}
+#annual-report-juva .container .projects-right .tags h2 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 22px;
+  padding-bottom: 30px;
+}
+#annual-report-juva .container .projects-right .tags .tag-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+#annual-report-juva .container .projects-right .tags .tag-buttons button {
+  padding: 7px;
+  border-radius: 20px;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  background-color: transparent;
+  color: #4F5955;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background-color 0.3s;
+}
+#annual-report-juva .container .projects-right .tags .tag-buttons button:hover {
+  background-color: #D9C3A9;
+}
+#annual-report-juva .container .projects-right .tags .tag-buttons button:nth-child(2),
+#annual-report-juva .container .projects-right .tags .tag-buttons button:nth-child(9) {
+  grid-column: span 2;
+}
+#annual-report-juva .container .projects-right .tags .tag-buttons button:nth-child(4),
+#annual-report-juva .container .projects-right .tags .tag-buttons button:nth-child(5),
+#annual-report-juva .container .projects-right .tags .tag-buttons button:nth-child(6) button:nth-child(1) {
+  grid-column: span 1;
+}
+#annual-report-juva .container .projects-right .tags .tag-buttons button:nth-child(7),
+#annual-report-juva .container .projects-right .tags .tag-buttons button:nth-child(8) {
+  grid-column: span 2;
+}
+#annual-report-juva .container .projects-right .tags .tag-buttons button:nth-child(9) {
+  grid-column: span 3;
+}
+#annual-report-juva .container .projects-right .form-assist {
+  background-color: #4F5955;
+  padding: 10px;
+  width: 300px;
+  height: 223px;
+}
+#annual-report-juva .container .projects-right .form-assist h2 {
+  color: #D9C3A9;
+  margin: 0;
+  padding-bottom: 15px;
+}
+#annual-report-juva .container .projects-right .form-assist p {
+  margin: 0;
+  color: rgb(196, 196, 196);
+  padding-bottom: 40px;
+}
+#annual-report-juva .container .projects-right .form-assist form .email-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+#annual-report-juva .container .projects-right .form-assist form .email-form input {
+  width: 100%;
+  padding: 10px 40px 10px 10px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+  font-style: italic;
+}
+#annual-report-juva .container .projects-right .form-assist form .email-form i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  font-weight: 600;
+}
+
 #contact-welcome {
   position: relative;
   overflow: hidden;

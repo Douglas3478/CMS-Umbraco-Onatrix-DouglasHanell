@@ -1,0 +1,63 @@
+#report-welcome {
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(247, 247, 247, 1);
+    padding-bottom: 80px;
+    padding-top: 60px;
+
+    .globeLeft {
+        position: absolute;
+        bottom: 80px;
+        left: 900px;
+        z-index: 1;
+    }
+
+    .container {
+        position: relative;
+        z-index: 2;
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            h1 {
+                font-size: 40px;
+            }
+
+            .about-directions {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: #4F5955;
+                    font-size: 14px;
+                }
+
+                i {
+                    color: #4F5955;
+                }
+
+                p {
+                    font-size: 14px;
+                    color: #D9C3A9;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .globeRight {
+        position: absolute;
+        bottom: -90px;
+        left: -40px;
+        transform: rotate(190deg);
+        z-index: 1;
+    }
+}
